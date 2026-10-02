@@ -50,7 +50,7 @@ export interface Hospital {
 }
 
 export interface DoctorRow {
-  doctor_id: number
+  doctor_id: number | null
   name: string
   qualification: string
   speciality_key: string
