@@ -2375,11 +2375,9 @@ def startup():
             conn.execute(sqlalchemy.text(
                 "ALTER TABLE medications ADD COLUMN last_taken_on DATE"))
         conn.commit()
-    db = SessionLocal()
+        db = SessionLocal()
     try:
-        if db.query(Hospital).count() == 0:
-            import seed as seed_mod
-            seed_mod.seed()
+        pass
     finally:
         db.close()
 
